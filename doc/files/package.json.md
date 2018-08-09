@@ -407,8 +407,12 @@ A "config" object can be used to set configuration parameters used in package
 scripts that persist across upgrades.  For instance, if a package had the
 following:
 
-    { "name" : "foo"
-    , "config" : { "port" : "8080" } }
+    {
+      "name" : "foo",
+      "config" : {
+         "port" : "8080"
+      }
+    }
 
 and then had a "start" command that then referenced the
 `npm_package_config_port` environment variable, then the user could
